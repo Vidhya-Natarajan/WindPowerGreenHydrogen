@@ -28,7 +28,7 @@ app.get('/api/WindpredAll', (req, res) => {
       
       console.log('done');
       var sql_query_allrows = "SELECT  \"date_timestamp\", \"power_actuals\"," + 
-                      " \"$TS-power_actuals\") FROM CKH46683.WIND_PRED_RESULTS;"; 
+                      " \"$TS-power_actuals\ as power_prediction") FROM CKH46683.WIND_PRED_RESULTS;"; 
       conn.query(sql_query_allrows, function (err, data) {
         if (err) console.log(err);
         else  
