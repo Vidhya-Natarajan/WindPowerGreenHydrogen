@@ -67,13 +67,13 @@ async getFetch() {
   }
   
    componentDidMount() {
-    axios.get(`http://localhost:5000`)
+    /* axios.get(`http://localhost:5000`)
       .then(res => {
  		this.setState({
         hydVar: res.data.hydrogen + ' Kg',
         isLoading: false,
       })
-      })
+      } ) */
   }
   
   
@@ -140,7 +140,7 @@ async getFetch() {
 
       </div>
 	   ) : (
-        <h3>Loading...</h3>
+        <h3>Loading123...</h3>
       )}
    </React.Fragment>
 
