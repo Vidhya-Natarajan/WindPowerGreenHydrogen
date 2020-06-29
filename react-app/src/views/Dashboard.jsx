@@ -79,10 +79,8 @@ async getFetch() {
   
   
   render() {
-	  const { isLoading, hydVar} = this.state;
+	//  const { isLoading, hydVar} = this.state;
     return (
-	 <React.Fragment>
-	 {!isLoading ? (
       <div className="content">
         <Grid fluid>
           <Row>
@@ -139,11 +137,6 @@ async getFetch() {
         </Grid>
 
       </div>
-	   ) : (
-        <h3>Loading123...</h3>
-      )}
-   </React.Fragment>
-
     );
   }
 }

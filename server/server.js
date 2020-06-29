@@ -6,12 +6,20 @@ const port = process.env.PORT || 5000;
 
 var ibmdb = require('ibm_db');
 const moment = require('moment');
+
+const path = require('path');
+
 var connStr = "DATABASE=BLUDB;HOSTNAME=dashdb-txn-sbox-yp-lon02-07.services.eu-gb.bluemix.net;UID=ckh46683;PWD=rkklpg^rdqxwcjxg;PORT=50000;PROTOCOL=TCPIP";
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var prev_timestamp = moment().subtract(14,'days').format('YYYY-MM-DD hh:mm:ss');
+
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.get('/api/WindpredAll', (req, res) => {
   
@@ -36,7 +44,7 @@ app.get('/api/WindpredAll', (req, res) => {
         ibmdb.open(connStr, function (err,conn) {
         if (err) return console.log(err);
         var sql_query_month = "SELECT  \"date_timestamp\",  \"power_actuals\"," + 
-                               "\"$TS-power_actuals\" " + 
+                               "\"$TS-power_actuals\" as power_prediction" + 
                                " FROM CKH46683.WIND_PRED_RESULTS" + 
                                " where \"date_timestamp\" > ('" + 
                                 prev_timestamp + "');";             

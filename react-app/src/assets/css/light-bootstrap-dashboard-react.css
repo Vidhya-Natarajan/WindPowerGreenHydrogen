@@ -1,3 +1,4 @@
+/*      light colors         */
 @keyframes spin {
   from {
     transform: rotate(0deg); }
@@ -421,7 +422,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   background: rgba(203, 203, 210, 0.15);
   position: relative;
   float: right;
-  width: calc(100% - 260px); }
+  width: 260px; }
   .main-panel > .content {
     padding: 30px 15px;
     min-height: calc(100% - 123px); }
@@ -1360,7 +1361,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   .navbar .btn-simple {
     font-size: 16px; }
   .navbar.fixed {
-    width: calc(100% - $sidebar-width);
+    width: calc(100% - 260px);
     right: 0;
     left: auto;
     border-radius: 0; }
