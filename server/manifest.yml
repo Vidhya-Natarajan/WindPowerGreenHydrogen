@@ -1,0 +1,5 @@
+
+applications:
+# replace the host variable below with your own unique one, as this one can be already taken
+- name: WindPowerGreenHydrogen
+  command:    node server.js

@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
+
 const port = process.env.PORT || 5000;
 
 var ibmdb = require('ibm_db');
@@ -25,10 +26,9 @@ app.get('/api/WindpredAll', (req, res) => {
   
     ibmdb.open(connStr, function (err,conn) {
       if (err) return console.log(err);
-      
-      console.log('done');
+           
       var sql_query_allrows = "SELECT  \"date_timestamp\", \"power_actuals\"," + 
-                      " \"$TS-power_actuals\ as power_prediction") FROM CKH46683.WIND_PRED_RESULTS;"; 
+                      " \"$TS-power_actuals\ as power_prediction\") FROM CKH46683.WIND_PRED_RESULTS;"; 
       conn.query(sql_query_allrows, function (err, data) {
         if (err) console.log(err);
         else  
@@ -51,7 +51,6 @@ app.get('/api/WindpredAll', (req, res) => {
         conn.query(sql_query_month, function (err, data) {
           if (err) console.log(err);
           else  
-            console.log(data);
             res.send({ data });
             conn.close(function () {
             console.log('done');

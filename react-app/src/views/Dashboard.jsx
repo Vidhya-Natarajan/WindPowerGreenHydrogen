@@ -53,7 +53,7 @@ class Dashboard extends Component {
 
 
 async getFetch() {
-  let url = 'http://api.eia.gov/series/?api_key=2178a1e50f61a4aa4c1c11c1b7b83169&series_id=TOTAL.DFONUUS.A'
+  let url = 'https://windpowergreenhydrogen.eu-gb.cf.appdomain.cloud/api/WindpredMonth'
   console.log("url " + url)
         
       const fetchResult = fetch(url)
@@ -61,10 +61,7 @@ async getFetch() {
       const response = await fetchResult;
       const jsonData = await response.json();
       console.log(jsonData);
-
-      
-
-  }
+}
   
    componentDidMount() {
     /* axios.get(`http://localhost:5000`)
@@ -75,8 +72,6 @@ async getFetch() {
       })
       } ) */
   }
-  
-  
   
   render() {
 	//  const { isLoading, hydVar} = this.state;
