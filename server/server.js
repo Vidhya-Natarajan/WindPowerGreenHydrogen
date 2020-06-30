@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+var cors = require('cors');
 
 const app = express();
 
@@ -12,6 +13,7 @@ const path = require('path');
 
 var connStr = "DATABASE=BLUDB;HOSTNAME=dashdb-txn-sbox-yp-lon02-07.services.eu-gb.bluemix.net;UID=ckh46683;PWD=rkklpg^rdqxwcjxg;PORT=50000;PROTOCOL=TCPIP";
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
