@@ -64,8 +64,7 @@ app.get('/api/WindpredAll', (req, res) => {
             power_below_percentile = 0;
             power_shortfall_instance = 0;
             power_excess_instance = 0;
-            //data1 = Object.assign({},data,{"mean_power":mean_power});
-            //data = data.concat({"mean":mean_power},data)
+
             power_actuals_array = []
             power_prediction_array = []
             data.forEach(element => {
@@ -84,13 +83,6 @@ app.get('/api/WindpredAll', (req, res) => {
                      }
                     ((item>percentile_power)?++power_excess_instance:++ power_shortfall_instance);
              });
-
-            /*console.log('power prediction' + power_prediction_array);
-            console.log ('percentile_power' + percentile_power);
-            console.log ('power_excess_forhydrogen' + power_excess_forhydrogen);
-            console.log ('power_below_percentile' + power_below_percentile);
-            console.log ('power_excess_instance' + power_excess_instance);
-            console.log ('power_shortfall_instance' + power_shortfall_instance);*/
 
             data1 = {"percentile_power": percentile_power,
                     "percentile_percentage":percentile_percentage, 

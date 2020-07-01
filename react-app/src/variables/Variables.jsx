@@ -501,17 +501,18 @@ var dataSales = {
   ]
 };
 var optionsSales = {
-  low: 0,
-  high: 800,
+  low: 1000,
+  high: 25000,
   showArea: false,
   height: "300px",
+  width: "600px",
   axisX: {
     showGrid: false
   },
   lineSmooth: true,
   showLine: true,
   showPoint: true,
-  fullWidth: true,
+
   chartPadding: {
     right: 50
   }
@@ -581,6 +582,8 @@ var legendBar = {
   types: ["info", "danger"]
 };
 
+
+
 module.exports = {
   style, // For notifications (App container and Notifications view)
   thArray,
@@ -595,5 +598,7 @@ module.exports = {
   dataBar,
   optionsBar,
   responsiveBar,
-  legendBar // For charts (Dashboard view)
+  legendBar
+   
+  // For charts (Dashboard view)
 };
