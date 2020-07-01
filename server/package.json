@@ -4,12 +4,13 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.2",
+    "body-parser": "^1.17.x",
     "bootstrap": "3.3.7",
+    "cors": "2.8.5",
+    "express": "^4.15.x",
     "ibm_db": "^2.7.0",
     "moment": "^2.27.0",
-    "express": "^4.15.x",
-    "body-parser": "^1.17.x",
-    "cors": "2.8.5"
+    "percentile": "^1.4.0"
   },
   "scripts": {
     "start": "node server.js"
