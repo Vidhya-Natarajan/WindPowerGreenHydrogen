@@ -476,8 +476,8 @@ var dataPie = {
   series: [40, 20, 40]
 };
 var legendPie = {
-  names: ["Open", "Bounce", "Unsubscribe"],
-  types: ["info", "danger", "warning"]
+  names: ["Grid", "Hydrogen"],
+  types: ["info", "success"]
 };
 
 // Data for Line Chart

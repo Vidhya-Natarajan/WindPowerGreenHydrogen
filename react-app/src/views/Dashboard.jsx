@@ -83,8 +83,16 @@ class Dashboard extends Component {
 
        var hydrogenSupplyTon = Math.floor(res.data.power_excess_forhydrogen / 48) 
 
-       var HydrogenSupplyCost = formatter.format(hydrogenSupplyTon * 2842);
+       var hydrogenSupplyCost = formatter.format(hydrogenSupplyTon * 2842);
 
+       var totalPower = res.data.power_excess_forhydrogen + res.data.power_below_percentile;
+       var hydrogenPercent = (res.data.power_excess_forhydrogen / totalPower) * 100;
+       var gridPercent = (res.data.power_below_percentile / totalPower) * 100;
+
+       var dataPie = {
+        labels: [Math.round(gridPercent) + "%",0,0,0,Math.round(hydrogenPercent) + "%" ],
+        series: [gridPercent,0,0,0,hydrogenPercent]
+      };
 
         this.setState({
           hydVar: hydrogenSupplyTon,
@@ -93,8 +101,8 @@ class Dashboard extends Component {
 
           balancedSupplyPerDay: Math.round(res.data.percentile_power),
           balancedSupplyPrice: balancedSupplyCost,
-          HydrogenSupplyCost: HydrogenSupplyCost,
-
+          hydrogenSupplyCost: hydrogenSupplyCost,
+          dataPie: dataPie,
           // Data for Line Chart
           dataPower: {
             labels: [
@@ -253,7 +261,7 @@ class Dashboard extends Component {
                 <Col lg={3} sm={6}>
                   <StatsCard
                     bigIcon={<img src={logo2} height={60} width={60} />}
-                    statsText="Hydrogen Supply Prediction (Tons)"
+                    statsText="Hydrogen Supply Projection (Tons)"
                     statsValue={this.state.hydVar}
                     statsIcon={<i className="fa fa-clock-o" />}
                     statsIconText="Updated now"
@@ -263,14 +271,14 @@ class Dashboard extends Component {
                   <StatsCard
                     bigIcon={<img src={logo1} height={60} width={60} />}
                     statsText="Hydrogen Supply Rev Projection"
-                    statsValue={this.state.HydrogenSupplyCost}
+                    statsValue={this.state.hydrogenSupplyCost}
                     statsIcon={<i className="fa fa-refresh" />}
                     statsIconText="Updated now"
                   />
                 </Col>
               </Row>
               <Row>
-                <Col lg={10} sm={10}>
+                <Col md={8}>
                   <Card
                     statsIcon="fa fa-history"
                     id="chartHours"
@@ -293,7 +301,25 @@ class Dashboard extends Component {
                   />
                   
                 </Col>
-
+             <Col md={4}>
+              <Card
+                statsIcon="fa fa-clock-o"
+                title="Wind Power distribution"
+                category="Hydrogen vs Grid"
+                stats="Updated day ago"
+                content={
+                  <div
+                    id="chartPreferences"
+                    className="ct-chart ct-major-second"
+                  >
+                    <ChartistGraph data={this.state.dataPie} type="Pie" />
+                  </div>
+                }
+                legend={
+                  <div className="legend">{this.createLegend(legendPie)}</div>
+                }
+              />
+            </Col>
 
               </Row>
               <Row>
