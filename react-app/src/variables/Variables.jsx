@@ -530,7 +530,7 @@ var responsiveSales = [
   ]
 ];
 var legendSales = {
-  names: ["Actual", "Mean", "Projected"],
+  names: ["Actual", "Balanced Supply", "Projected"],
   types: ["info", "danger", "warning"]
 };
 
@@ -557,6 +557,9 @@ var dataBar = {
 };
 
 var hydPred = 0;
+
+var costPerMw = 280;
+
 var optionsBar = {
   seriesBarDistance: 10,
   axisX: {

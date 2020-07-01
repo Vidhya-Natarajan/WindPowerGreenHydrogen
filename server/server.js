@@ -58,7 +58,7 @@ app.get('/api/WindpredAll', (req, res) => {
           if (err) console.log(err);
           else  
             mean_power = 0;
-            percentile_percentage = 30;
+            percentile_percentage = 20;
             percentile_power = 0;
             power_excess_forhydrogen = 0;
             power_below_percentile = 0;

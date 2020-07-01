@@ -9,7 +9,7 @@ export class StatsCard extends Component {
         <div className="content">
           <Row>
             <Col xs={5}>
-              <div className="icon-big text-center icon-warning">
+              <div className="icon-big text-left icon-warning">
                 {this.props.bigIcon}
               </div>
             </Col>

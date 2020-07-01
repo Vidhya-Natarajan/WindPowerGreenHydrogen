@@ -40,19 +40,12 @@ class Sidebar extends Component {
             null
           )}
         <div className="logo">
-          <a
-            href=""
-            className="simple-text logo-mini"
-          >
-            <div className="logo-img">
-              <img src={logo} alt="logo_image" />
-            </div>
-          </a>
+
           <a
             href=""
             className="simple-text logo-normal"
           >
-            Wind Power Forcast
+            Wind Power to Green Hydrogen
           </a>
         </div>
         <div className="sidebar-wrapper">
