@@ -7,9 +7,10 @@ Making HTTP + API calls in express server
 Communicating between parent and child component
 Using Bootstrap along with React
 Using Basic Routing in React
+
 Live Application URL
 https://windpowergreenhydrogen.eu-gb.cf.appdomain.cloud
-This URL has the application deployed in
+This URL has the application deployed in IBM Cloud foundry
 
 Prerequisites
 Install Node JS
