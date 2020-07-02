@@ -43,19 +43,21 @@ There are three folders
 
 ### React-app & server steps
 
-Install all the npm packages. Go into the react-app and server project folder and type the following command to install all npm packages
 
 ```
-1. npm install
+1. Install all the npm packages. Go into the react-app and server project folder and type the following command to install all npm packages
+
+npm install
 
 2. Update the db2 connection string based on Db2 credentials in /server/server.js
 
 3. In order to run the application Type the following command
-  Run Server locally - 
+  3.a Run Server locally - 
 node server.js
 
- Run react app locally - 
-npm start
+ 3.b Run react app locally - 
+ npm start
+ 
 The Application Runs on localhost:3000
 
 5. build
@@ -69,9 +71,9 @@ npm run-script minify-sass
 npm run-script build
 
 4. push
-copy the build folder in to server folder
-Update the yaml file 
-cf push in to IBM cloud Cloud foundry Org
+ 4.a copy the build folder in to server folder
+ 4.b Update the yaml file 
+ 4.c cf push in to IBM cloud Cloud foundry Org
 
 
 ```
