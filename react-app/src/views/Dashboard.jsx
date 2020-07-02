@@ -77,12 +77,13 @@ class Dashboard extends Component {
         currency: 'EUR',
        });
       
+       // .280 Eur per kwH for Belgium
        var balancedSupplyCost = formatter.format((Math.round(res.data.percentile_power) * 280));
 
-       console.log("balancedSupplyCost" + balancedSupplyCost);
-
+       // 1Kg produced per 48Kwh
        var hydrogenSupplyTon = Math.floor(res.data.power_excess_forhydrogen / 48) 
 
+       // 2.84 Eur per kg of hydrogen  
        var hydrogenSupplyCost = formatter.format(hydrogenSupplyTon * 2842);
 
        var totalPower = res.data.power_excess_forhydrogen + res.data.power_below_percentile;
