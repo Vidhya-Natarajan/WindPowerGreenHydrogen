@@ -36,31 +36,29 @@ There are three folders
 
 ### Watson Studio Steps
 
-upload WindForecast_hourly_2019Jul_2020Jun_shaped .csv as a data source
-Create a output data source with above Db2 instance
-
-Import the wind_power_SPSS_flow.str in watson studio SPSS modeller
-
-Run the flow and 
+1. Upload WindForecast_hourly_2019Jul_2020Jun_shaped .csv as a data source
+2. Create a output data source with above Db2 instance
+3. Import the wind_power_SPSS_flow.str in watson studio SPSS modeller
+4. Run the flow and verify the db2 table 
 
 ### React-app & server steps
 
 Install all the npm packages. Go into the react-app and server project folder and type the following command to install all npm packages
 
 ```
-npm install
+1. npm install
 
-Update the db2 connection string based on Db2 credentials in /server/server.js
+2. Update the db2 connection string based on Db2 credentials in /server/server.js
 
-In order to run the application Type the following command
-1. Run Server locally - 
+3. In order to run the application Type the following command
+  Run Server locally - 
 node server.js
 
-2. Run react app locally - 
+ Run react app locally - 
 npm start
 The Application Runs on localhost:3000
 
-3. build
+5. build
 
 npm run-script compile-sass
 
