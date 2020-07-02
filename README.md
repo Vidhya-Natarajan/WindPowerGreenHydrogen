@@ -13,7 +13,7 @@ This Project is a Wind Power Projection React which demonstrates the following
 
 ## Live Application URL
 
-### https://https://windpowergreenhydrogen.eu-gb.cf.appdomain.cloud
+### https://windpowergreenhydrogen.eu-gb.cf.appdomain.cloud
 
 This URL has the application deployed in
 
