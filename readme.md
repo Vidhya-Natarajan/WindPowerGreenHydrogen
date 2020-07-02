@@ -100,5 +100,5 @@ React Bootstrap : Refer to https://react-bootstrap.github.io/getting-started/int
 
 The Application is deployed in https://windpowergreenhydrogen.eu-gb.cf.appdomain.cloud
 
-Click on the link to see the application
+
 
