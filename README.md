@@ -22,17 +22,16 @@ Refer to https://nodejs.org/en/ to install nodejs
 ## Clone the app from Github
 Clone the app from the Github. This will help to easily run the project and also build the source files easily. Use the following git to clone the app
 
-Git Clone https://github.com/Vidhya-Natarajan/Wind-React-App.git
-
+Git Clone https://github.com/Vidhya-Natarajan/WindPowerGreenHydrogen.git
 
 ## Cloning and Running the Application in local
 
 Clone the project into local
 
 There are three folders
-1. react-app  - contains the react application
-2. server     - contains express server for API and serving react app
-3. Watson Studio - files for machine learning
+1. react-app       - contains the react application
+2. server          - contains express server for API and serving react app
+3. Watson Studio   - files for machine learning
 
 ### Watson Studio Steps
 
@@ -52,11 +51,9 @@ npm install
 2. Update the db2 connection string based on Db2 credentials in /server/server.js
 
 3. In order to run the application Type the following command
-  3.a Run Server locally - 
-node server.js
+  3.a Run Server locally - node server.js
 
- 3.b Run react app locally - 
- npm start
+  3.b Run react app locally -  npm start
  
 The Application Runs on localhost:3000
 
