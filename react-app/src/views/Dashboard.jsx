@@ -140,7 +140,6 @@ class Dashboard extends Component {
         {!isLoading ? (
           <div className="content">
             <Grid fluid>
-
               <Row>
                 <Col lg={3} sm={6}>
                   <StatsCard
