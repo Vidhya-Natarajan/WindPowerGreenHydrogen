@@ -502,10 +502,10 @@ var dataSales = {
 };
 var optionsSales = {
   low: 1000,
-  high: 25000,
+  high: 65000,
   showArea: false,
   height: "300px",
-  width: "600px",
+  width: "700px",
   axisX: {
     showGrid: false
   },
@@ -514,7 +514,7 @@ var optionsSales = {
   showPoint: true,
 
   chartPadding: {
-    right: 50
+    right: 0
   }
 };
 var responsiveSales = [
