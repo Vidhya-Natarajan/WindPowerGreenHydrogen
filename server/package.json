@@ -9,7 +9,7 @@
     "cors": "2.8.5",
     "express": "^4.15.x",
     "ibm_db": "^2.7.0",
-    "moment": "^2.27.0",
+    "moment": "^2.29.2",
     "percentile": "^1.4.0"
   },
   "scripts": {
