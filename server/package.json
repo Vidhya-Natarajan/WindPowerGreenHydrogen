@@ -7,7 +7,7 @@
     "body-parser": "^1.17.x",
     "bootstrap": "3.3.7",
     "cors": "2.8.5",
-    "express": "^4.15.x",
+    "express": "^4.17.x",
     "ibm_db": "^2.7.0",
     "moment": "^2.27.0",
     "percentile": "^1.4.0"
